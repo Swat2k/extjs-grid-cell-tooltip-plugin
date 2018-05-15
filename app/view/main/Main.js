@@ -5,14 +5,9 @@ Ext.define('App.view.main.Main', {
     requires: [
         'App.plugins.CellTooltip',
         'Ext.plugin.Viewport',
-        'Ext.window.MessageBox',
-        'App.view.main.MainController',
-        'App.view.main.MainModel'
+        'Ext.window.MessageBox'
     ],
     layout: 'fit',
-    controller: 'main',
-    viewModel: 'main',
-
     items: [{
         xtype: 'grid',
         store: 'personnel',
