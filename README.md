@@ -7,7 +7,11 @@ Tested on latest version ExtJS v6.6.0.178
 
 Copy the plugin class, from the demo application, "App.plugins.CellTooltip" into your application
 
-## Example usage
+## Example application
+
+Clone repository and install ExtJS framework by using command
+
+    $ sencha app install ~/sencha-sdks
 
 An example of usage you can find in class "App.view.main.Main"
 
