@@ -17,13 +17,12 @@ Ext.define('App.plugins.CellTooltip', {
             cellTd, cellInnerDiv;
 
         store.each(function (record) {
-            columns.map( (column, columnIndex) => {
+            columns.filter(x => !x.isHidden() && !me.isTooltipDisabled(x, record, store, view)).map( (column, columnIndex) => {
 
-                if (column.isHidden() || me.isTooltipDisabled(column, record, store, view)) {
-                    return true;
-                }
-                
                 cellTd = view.getCell(record, columnIndex);
+
+                if (!cellTd) return true;
+
                 cellInnerDiv = cellTd.querySelector(`.${Ext.baseCSSPrefix}grid-cell-inner`);
 
                 if (cellTd.hasAttribute('data-qtip') && !cellTd.hasAttribute('overflow-tooltip')) {
