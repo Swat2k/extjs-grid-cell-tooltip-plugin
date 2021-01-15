@@ -15,8 +15,6 @@ Ext.define('App.plugins.CellTooltip', {
 	removeMarkup: function() {
 		let me = this;
 		me.tdCells.map(x => me.removeTooltip(x));
-		// Для активной cell
-		me.tdCells.map(x => me.removeTooltip(x));
 	},
 	addMarkup: function(view, record, tdCell, index, e) {
 		let me = this,
